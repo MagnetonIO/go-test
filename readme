@@ -1,7 +1,0 @@
-mkdir go-test && cd go-test
-go mod init github.com/magnetonio/go-test
-go get -u github.com/gin-gonic/gin
-docker-compose up --build
-
-Test url
-http://localhost:8080/

@@ -1,5 +1,3 @@
-module github.com/magnetonio/go-test
+module github.com/yourusername/btc-ltp-service
 
-go 1.16
-
-require github.com/gin-gonic/gin v1.10.0
+go 1.21
