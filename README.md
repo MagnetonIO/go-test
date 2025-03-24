@@ -96,7 +96,11 @@ go test -v -short
 - The service caches LTP data for 1 minute to ensure time accuracy as required
 - Data is refreshed in the background every 30 seconds to minimize latency
 - The service handles Kraken API's naming conventions (XBT instead of BTC)
-- Error handling is implemented for network failures and API errors
+- Robust error handling with retry logic and exponential backoff:
+  - Configurable timeout and connection settings
+  - Multiple retries with increasing delays
+  - Fallback to individual pair requests if the combined request fails
+  - Jitter added to backoff times to prevent thundering herd problems
 
 ## Dependencies
 
